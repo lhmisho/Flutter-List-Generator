@@ -9,6 +9,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Startup name Generator',
+      theme: ThemeData(          // Add the 3 lines from here... 
+        primaryColor: Colors.white,
+      ), 
       home: RandomWord(),
     );
   }
@@ -36,6 +39,7 @@ class _RandomWordState extends State<RandomWord> {
       body: _buildSuggestion(),
     );
   }
+
   void _pushSaved() {
     Navigator.of(context).push(
       MaterialPageRoute<void>(
